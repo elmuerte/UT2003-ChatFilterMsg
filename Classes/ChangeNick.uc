@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 // filename:    ChangeNick.uc
-// version:     100
+// version:     101
 // author:      Michiel 'El Muerte' Hendriks <elmuerte@drunksnipers.com>
 // purpose:     displays a bad nick message together with a request to change 
 //              it without removing the user from the server
@@ -13,10 +13,19 @@ function InitComponent(GUIController MyController, GUIComponent MyOwner)
 	Super.InitComponent(MyController, MyOwner);
   GUIButton(Controls[3]).OnClick=Ok;  
   GUIButton(Controls[5]).OnClick=Cancel; 
-  GUIScrollTextBox(Controls[2]).SetContent(class'ChatFilterMsg'.default.messages[0]); // show bad nick warning
-  GUIScrollTextBox(Controls[2]).MyScrollText.EndScrolling();
   GUIEditBox(Controls[6]).TextStr = "";
   OnPreDraw = PreDraw;
+}
+
+event HandleParameters(string Param1, string Param2)
+{
+  SetText(int(Param1));
+}
+
+function SetText(int msg)
+{
+  GUIScrollTextBox(Controls[2]).SetContent(class'ChatFilterMsg'.default.messages[msg]);
+  GUIScrollTextBox(Controls[2]).MyScrollText.EndScrolling();
 }
 
 function bool PreDraw(Canvas Canvas)
@@ -36,6 +45,7 @@ function bool Ok(GUIComponent Sender)
   local string newname;
   newname = Trim(GUIEditBox(Controls[6]).TextStr);
   if (newname == "") return false;
+  if (Caps(newname) == Caps(PlayerOwner().PlayerReplicationInfo.PlayerName)) return false;
   PlayerOwner().SetName(newname);
 	Controller.CloseMenu();  
   return true;

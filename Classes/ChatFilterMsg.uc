@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 // filename:    ChatFilterMsg.uc
-// version:     100
+// version:     101
 // author:      Michiel 'El Muerte' Hendriks <elmuerte@drunksnipers.com>
 // purpose:     displays a "bad nick" message
 //              for this to work ChatFilter must be a ServerPackage
@@ -118,11 +118,12 @@ defaultproperties
   WinHeight=0.3
   bDisconnectOnOpen=true
 
-  messages(0)="Your nickname contains foul words, or is simply not allowed.||To play on this server you MUST change your nickname."
+  messages(0)="Your nickname contains foul language||To play on this server you MUST change your nickname."
   messages(1)="You have been kicked from the server because of abusive chatting."
   messages(2)="You have been banned from the server because of abusive chatting."
   messages(3)="You have been banned from this game because of abusive chatting."
   messages(4)="You have been kicked from the server because of abusive chatting.|As requested by the the players."
   messages(5)="You have been banned from the server because of abusive chatting.|As requested by the the players."
   messages(6)="You have been banned from this game because of abusive chatting.|As requested by the the players."
+  messages(7)="Your nickname is not allowed||To play on this server you MUST change your nickname."
 }
