@@ -118,11 +118,11 @@ defaultproperties
   WinHeight=0.3
   bDisconnectOnOpen=true
 
-  messages(0)="Your nickname contains foul words (as defined by the server admin)||To play on this server you MUST change your nickname."
-  messages(1)="You have been kicked from the server because of abusive chatting"
-  messages(2)="You have been banned from the server because of abusive chatting"
-  messages(3)="You have been banned from this game because of abusive chatting"
-  messages(4)="You have been kicked from the server because of abusive chatting|As requested by the the players"
-  messages(5)="You have been banned from the server because of abusive chatting|As requested by the the players"
-  messages(6)="You have been banned from this game because of abusive chatting|As requested by the the players"
+  messages(0)="Your nickname contains foul words, or is simply not allowed.||To play on this server you MUST change your nickname."
+  messages(1)="You have been kicked from the server because of abusive chatting."
+  messages(2)="You have been banned from the server because of abusive chatting."
+  messages(3)="You have been banned from this game because of abusive chatting."
+  messages(4)="You have been kicked from the server because of abusive chatting.|As requested by the the players."
+  messages(5)="You have been banned from the server because of abusive chatting.|As requested by the the players."
+  messages(6)="You have been banned from this game because of abusive chatting.|As requested by the the players."
 }
