@@ -88,7 +88,7 @@ defaultproperties
 	Controls(2)=GUIScrollTextBox'BadText'
 
   Begin Object class=GUIImage Name=ChatFilterLogo
-    Image=Texture'ChatFilterMsg.ChatFilterLogoImage'
+    Image=Texture'ChatFilterLogoImage'
     WinWidth=0.2
 		WinHeight=0.6
 		WinLeft=0.05
