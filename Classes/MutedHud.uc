@@ -37,7 +37,7 @@ defaultproperties
 {
   msg=" ChatFilter: Muted"
   IconScale=0.5
-  Logo=Texture'ChatFilterMsg154.ChatFilterLogoImage'
+  Logo=Texture'ChatFilterMsg155.ChatFilterLogoImage'
   bVisible=true
   bActive=true
   bRequiresTick=True
