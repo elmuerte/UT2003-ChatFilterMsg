@@ -14,6 +14,7 @@ var string msg;
 simulated function PostRender( canvas Canvas )
 {
   local float X,Y;
+  Canvas.Reset();
   Canvas.style = 5; //ERenderStyle.STY_Alpha;
   Canvas.Font = class'HudBase'.static.GetMediumFontFor(Canvas);
   Canvas.StrLen(msg, X, Y);
@@ -27,11 +28,16 @@ simulated function PostRender( canvas Canvas )
   Canvas.DrawText(msg, false);
 }
 
+simulated function NotifyLevelChange ()
+{
+ 	Master.RemoveInteraction(Self);
+}
+
 defaultproperties
 {
   msg=" ChatFilter: Muted"
   IconScale=0.5
-  Logo=Texture'ChatFilterMsg152.ChatFilterLogoImage'
+  Logo=Texture'ChatFilterMsg154.ChatFilterLogoImage'
   bVisible=true
   bActive=true
   bRequiresTick=True
