@@ -44,6 +44,7 @@ simulated function MutedHud(PlayerController PC)
 
 defaultproperties
 {
+  bHidden=true
   RemoteRole=ROLE_SimulatedProxy
   bAlwaysRelevant=True
 }
